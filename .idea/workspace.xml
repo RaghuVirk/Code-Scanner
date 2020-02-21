@@ -10,7 +10,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b06919-fe97-48c0-b550-cc17a4cd4ba2" name="Default Changelist" comment="" />
+    <list default="true" id="c5b06919-fe97-48c0-b550-cc17a4cd4ba2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +155,9 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codescanner/build.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-242" />
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -213,6 +217,9 @@
       <replace>gitignore</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -254,12 +261,20 @@
       </list>
     </option>
   </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="46" />
     <option name="y" value="219" />
     <option name="width" value="1270" />
     <option name="height" value="555" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <hideEmptyPackages AndroidView="true" />
@@ -274,11 +289,11 @@
           <expand>
             <path>
               <item name="barcode-reader" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="e9137016:NonAndroidModuleNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
               <item name="barcode-reader" type="1abcf292:AndroidViewProjectNode" />
-              <item name="codescanner" type="e9137016:NonAndroidModuleNode" />
+              <item name="codescanner" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
               <item name="barcode-reader" type="1abcf292:AndroidViewProjectNode" />
@@ -292,6 +307,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/codescanner/src/main/java/com/virk/codescanner" />
@@ -966,7 +982,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codescanner/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-242" />
+      </provider>
     </entry>
   </component>
   <component name="gradleExecuteTaskHistory">
