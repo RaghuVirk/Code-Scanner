@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:background="@color/colorPrimary"
+          android:theme="@style/ThemeOverlay.AppCompat.Dark"
+          app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.virk.codescanner.cameraUI.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarlayout">
+
+      <com.virk.codescanner.cameraUI.GraphicOverlay
+          android:id="@+id/graphicOverlay"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+
+    </com.virk.codescanner.cameraUI.CameraSourcePreview>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/il_from_date"
+      android:layout_width="@dimen/_200sdp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginLeft="@dimen/_8sdp"
+      android:layout_marginRight="@dimen/_8sdp"
+      android:layout_marginBottom="?attr/actionBarSize"
+      app:helperTextEnabled="true"
+      app:hintEnabled="true"
+      app:helperText="@string/st_code_helper_text"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <EditText
+        android:id="@+id/barcode_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:editable="false"
+        android:textColor="@color/black"
+        android:hint="@string/st_scanned_code"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

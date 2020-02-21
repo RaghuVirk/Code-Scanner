@@ -1,0 +1,81 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:1:1-26:12
+INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:1:1-26:12
+INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:1:1-26:12
+INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:1:1-26:12
+INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:1:1-26:12
+INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:1:1-26:12
+INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:1:1-26:12
+	package
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:2:5-35
+		INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+		INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:1:1-26:12
+		INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:1:1-26:12
+		INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:1:11-69
+	android:installLocation
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:3:5-35
+uses-feature#android.hardware.camera
+ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:4:1-56
+	android:name
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:4:15-53
+uses-permission#android.permission.CAMERA
+ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:6:1-61
+	android:name
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:6:18-58
+application
+ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:7:5-24:19
+	android:supportsRtl
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:12:9-37
+	android:label
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:11:9-40
+	android:hardwareAccelerated
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:10:9-43
+	android:fullBackupContent
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:9:9-42
+	android:allowBackup
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:13:9-40
+meta-data#com.google.android.gms.version
+ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:14:9-16:69
+	android:value
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:16:13-66
+	android:name
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:15:13-58
+meta-data#com.google.android.gms.vision.DEPENDENCIES
+ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:17:9-19:39
+	android:value
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:19:13-36
+	android:name
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:18:13-70
+activity#com.virk.codescanner.BarcodeCaptureActivity
+ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:21:9-23:43
+	android:screenOrientation
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:22:13-49
+	android:label
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:23:13-41
+	android:name
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml:21:19-57
+uses-sdk
+INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+		INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+		ADDED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
+		INJECTED from D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\src\main\AndroidManifest.xml
