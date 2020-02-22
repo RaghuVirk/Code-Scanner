@@ -7,7 +7,6 @@ The Barcode type represents a single recognized barcode and its value. In the ca
 
 # Implementation Guide
 
-
 To get a Git project into your build:
 
 *Step 1.* Add the JitPack repository to your build file 
@@ -76,9 +75,11 @@ BarcodeCaptureActivity.startScanner(Activity.this);
             super.onActivityResult(requestCode, resultCode, data);
         }
     }```
+    
     # Note
     You may face manifest merge error while compilation due to same string name use below code in your manifest to solve the error :-
     ```java
     tools:replace="android:label"
     ```
+    Also use 'NoActionbar' theme with this library
     # Thanks you
