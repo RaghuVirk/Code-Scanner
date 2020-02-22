@@ -29,7 +29,8 @@ dependencies {
 ```jave
 BarcodeCaptureActivity.startScanner(Activity.this);
 ```
-*Step 3.* Override onActivityResult method to get results from BarcodeCaptureActivity.
+*Step 3.* Override onActivityResult method to get results from BarcodeCaptureActivity
+
 ```jave
   /**
      * Called when an activity you launched exits, giving you the requestCode
@@ -74,12 +75,12 @@ BarcodeCaptureActivity.startScanner(Activity.this);
         else {
             super.onActivityResult(requestCode, resultCode, data);
         }
-    }```
-    
+    }
+    ```    
     # Note
     You may face manifest merge error while compilation due to same string name use below code in your manifest to solve the error :-
-    ```java
+    
     tools:replace="android:label"
-    ```
+ 
     Also use 'NoActionbar' theme with this library
     # Thanks you
