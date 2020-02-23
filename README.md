@@ -1,7 +1,7 @@
 # Code-Scanner
 QR/BAR Code Scanner Library to scan QR/BAR codes by Raghubeer Singh Virk
 
-Classes for detecting and parsing bar codes are available in the com.google.android.gms.vision.barcode namespace. The BarcodeDetector class is the main workhorse -- processing Frame objects to return a SparseArray types.
+Classes for detecting and parsing bar codes are available in the com.virk.codescanner namespace. The BarcodeDetector class is the main workhorse -- processing Frame objects to return a SparseArray types.
 
 The Barcode type represents a single recognized barcode and its value. In the case of 1D barcode such as UPC codes, this will simply be the number that is encoded in the bar code. This is available in the rawValue property, with the detected encoding type set in the format field.
 
