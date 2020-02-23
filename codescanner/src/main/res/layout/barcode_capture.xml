@@ -54,17 +54,15 @@
         android:layout_marginLeft="@dimen/_8sdp"
         android:layout_marginRight="@dimen/_8sdp"
         android:layout_marginBottom="?attr/actionBarSize"
-        app:helperText="@string/st_code_helper_text"
-        app:helperTextEnabled="true"
         app:hintEnabled="true">
 
-        <EditText
+        <TextView
             android:id="@+id/barcode_value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:editable="false"
             android:focusable="false"
-            android:hint="@string/st_scanned_code"
+            android:text="@string/st_code_helper_text"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>

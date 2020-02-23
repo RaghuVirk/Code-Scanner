@@ -93,7 +93,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
     private boolean useFlash = false;
     private boolean previewCode = false;
     private Toolbar toolBar;
-    private EditText scannedCode;
+//    private EditText scannedCode;
     private Barcode capturedBarCode;
 
 
@@ -126,7 +126,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
         mPreview =  findViewById(R.id.preview);
         mGraphicOverlay =  findViewById(R.id.graphicOverlay);
         toolBar = findViewById(R.id.toolbar);
-        scannedCode = findViewById(R.id.barcode_value);
+//        scannedCode = findViewById(R.id.barcode_value);
 
         setupToolBar("QR/Bar Code Scanner");
 
@@ -303,7 +303,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
                                     mPreview.stop();
                                 }
                                 enableMenu();
-                                scannedCode.setText(barcode.rawValue);
+//                                scannedCode.setText(barcode.rawValue);
                             }
                         }, 500);
 
