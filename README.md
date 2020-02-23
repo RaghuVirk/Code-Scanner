@@ -22,7 +22,7 @@ allprojects {
 *Step 2.* Add the dependency
 ```java
 dependencies {
-	        implementation 'com.github.RaghuVirk:Code-Scanner:0.1.0'
+	        implementation 'com.github.RaghuVirk:Code-Scanner:0.1.1'
 	}
 ```
 *Step 3.* Call BarcodeCaptureActivity for result.
@@ -77,10 +77,11 @@ BarcodeCaptureActivity.startScanner(Activity.this);
         }
     }
     ```    
-    # Note
-    You may face manifest merge error while compilation due to same string name use below code in your manifest to solve the error :-
-    
-    tools:replace="android:label"
- 
-    Also use 'NoActionbar' theme with this library
-    # Thanks you
+# Note
+You may face manifest merge error while compilation due to same string name use below code in your manifest to solve the error:-
+```java     
+tools:replace="android:label"
+``` 
+Also use 'NoActionbar' theme with this library
+
+# Thanks you
