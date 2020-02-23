@@ -76,7 +76,7 @@ BarcodeCaptureActivity.startScanner(Activity.this);
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
-    ```    
+```   
 # Note
 You may face manifest merge error while compilation due to same string name use below code in your manifest to solve the error:-
 ```java     
