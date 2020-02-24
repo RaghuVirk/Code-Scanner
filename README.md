@@ -23,6 +23,7 @@ allprojects {
 ```java
 dependencies {
 	        implementation 'com.github.RaghuVirk:Code-Scanner:0.1.1'
+		implementation 'com.google.android.gms:play-services-vision:19.0.0'
 	}
 ```
 *Step 3.* Call BarcodeCaptureActivity for result.
