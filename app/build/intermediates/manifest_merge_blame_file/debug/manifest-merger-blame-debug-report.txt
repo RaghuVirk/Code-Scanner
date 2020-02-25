@@ -36,59 +36,60 @@
 23-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:15:9-40
 24        android:supportsRtl="true"
 24-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:16:9-37
-25        android:theme="@style/AppTheme" >
-25-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:17:9-40
-26        <meta-data
-26-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:18:9-20:69
-27            android:name="com.google.android.gms.version"
-27-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:19:13-58
-28            android:value="@integer/google_play_services_version" />
-28-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:20:13-66
-29        <meta-data
-29-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:21:9-23:39
-30            android:name="com.google.android.gms.vision.DEPENDENCIES"
-30-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:22:13-70
-31            android:value="barcode" />
-31-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:23:13-36
-32
-33        <activity
-33-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:25:9-33:20
-34            android:name="com.google.android.gms.samples.vision.barcodereader.MainActivity"
-34-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:26:13-41
-35            android:label="@string/title_activity_main" >
-35-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:27:13-56
-36            <intent-filter>
-36-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:28:13-32:29
-37                <action android:name="android.intent.action.MAIN" />
-37-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:29:17-69
-37-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:29:25-66
-38
-39                <category android:name="android.intent.category.LAUNCHER" />
-39-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:31:17-77
-39-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:31:27-74
-40            </intent-filter>
-41        </activity>
-42
-43        <!--
-44            <activity android:name=".BarcodeCaptureActivit"
-45            android:label="Read Barcode"/>
-46        -->
-47        <activity
-47-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:9-29:52
-48            android:name="com.virk.codescanner.BarcodeCaptureActivity"
-48-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-71
-49            android:label="Read Barcode"
-49-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-41
-50            android:screenOrientation="portrait" />
-50-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-49
-51        <activity
-51-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-52            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-52-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-53            android:exported="false"
-53-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-54            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-54-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-55    </application>
-56
-57</manifest>
+25        android:testOnly="true"
+26        android:theme="@style/AppTheme" >
+26-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:17:9-40
+27        <meta-data
+27-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:18:9-20:69
+28            android:name="com.google.android.gms.version"
+28-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:19:13-58
+29            android:value="@integer/google_play_services_version" />
+29-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:20:13-66
+30        <meta-data
+30-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:21:9-23:39
+31            android:name="com.google.android.gms.vision.DEPENDENCIES"
+31-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:22:13-70
+32            android:value="barcode" />
+32-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:23:13-36
+33
+34        <activity
+34-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:25:9-33:20
+35            android:name="com.google.android.gms.samples.vision.barcodereader.MainActivity"
+35-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:26:13-41
+36            android:label="@string/title_activity_main" >
+36-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:27:13-56
+37            <intent-filter>
+37-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:28:13-32:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:29:17-69
+38-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:29:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:31:17-77
+40-->D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\app\src\main\AndroidManifest.xml:31:27-74
+41            </intent-filter>
+42        </activity>
+43
+44        <!--
+45            <activity android:name=".BarcodeCaptureActivit"
+46            android:label="Read Barcode"/>
+47        -->
+48        <activity
+48-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:9-29:52
+49            android:name="com.virk.codescanner.BarcodeCaptureActivity"
+49-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-71
+50            android:label="Read Barcode"
+50-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-41
+51            android:screenOrientation="portrait" />
+51-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-49
+52        <activity
+52-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+53            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+53-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+54            android:exported="false"
+54-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+55            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+55-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+56    </application>
+57
+58</manifest>
