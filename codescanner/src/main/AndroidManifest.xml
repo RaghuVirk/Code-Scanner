@@ -8,9 +8,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
-        android:label="MultiTrackerApp"
         tools:node="merge"
-        tools:remove="attr,android:supportRtl"
         android:supportsRtl="true">
         <meta-data
             android:name="com.google.android.gms.version"
