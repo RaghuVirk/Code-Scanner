@@ -1,12 +1,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.virk.codescanner"
     android:installLocation="auto">
 
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:label="MultiTrackerApp"
+        tools:node="merge"
+        tools:remove="attr,android:supportRtl"
         android:supportsRtl="true">
         <meta-data
             android:name="com.google.android.gms.version"
@@ -18,6 +22,7 @@
         <activity
             android:name=".BarcodeCaptureActivity"
             android:label="Read Barcode"
+            tools:node="strict"
             android:screenOrientation="portrait" />
     </application>
 
