@@ -22,7 +22,7 @@ allprojects {
 *Step 2.* Add the dependency
 ```java
 dependencies {
-	        implementation 'com.github.RaghuVirk:Code-Scanner:0.1.1'
+	        implementation 'com.github.RaghuVirk:Code-Scanner:0.1.8'
 		implementation 'com.google.android.gms:play-services-vision:19.0.0'
 	}
 ```
