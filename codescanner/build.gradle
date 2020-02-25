@@ -7,7 +7,7 @@ ext {
 }
 
 
-android {
+/*android {
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
 
@@ -23,8 +23,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-}
-/*android {
+}*/
+android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
 
@@ -40,7 +40,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-}*/
+}
 /*
 android {
     compileSdkVersion 29
