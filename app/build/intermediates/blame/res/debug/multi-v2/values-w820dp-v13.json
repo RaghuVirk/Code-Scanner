@@ -4,15 +4,8 @@
             "outputFile": "D:\\MyProjects\\Demo\\android-vision-master\\android-vision-master\\visionSamples\\barcode-reader\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "D:\\MyProjects\\Demo\\android-vision-master\\android-vision-master\\visionSamples\\barcode-reader\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "source": "D:\\MyProjects\\Demo\\android-vision-master\\android-vision-master\\visionSamples\\barcode-reader\\codescanner\\build\\intermediates\\packaged_res\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "4",
-                        "startOffsets": "291",
-                        "endColumns": "57",
-                        "endOffsets": "344"
-                    },
-                    "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",

@@ -137,8 +137,8 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
 
         initializeScanner(autoFocus, useFlash, previewCode);
         Snackbar.make(mGraphicOverlay, "Tap to capture. Pinch/Stretch to zoom",
-                Snackbar.LENGTH_INDEFINITE).setBackgroundTint(getResources().getColor(R.color.white))
-                .setTextColor(getResources().getColor(R.color.black))
+                Snackbar.LENGTH_SHORT)/*.setBackgroundTint(getResources().getColor(R.color.white))
+                .setTextColor(getResources().getColor(R.color.black))*/
                 .show();
 
 

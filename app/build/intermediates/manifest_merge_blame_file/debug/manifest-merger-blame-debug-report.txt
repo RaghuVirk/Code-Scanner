@@ -75,13 +75,13 @@
 46            android:label="Read Barcode"/>
 47        -->
 48        <activity
-48-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:9-33:52
+48-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:9-29:52
 49            android:name="com.virk.codescanner.BarcodeCaptureActivity"
-49-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:13-71
+49-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-71
 50            android:label="Read Barcode"
-50-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:13-41
+50-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-41
 51            android:screenOrientation="portrait" />
-51-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:13-49
+51-->[:codescanner] D:\MyProjects\Demo\android-vision-master\android-vision-master\visionSamples\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-49
 52        <activity
 52-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
 53            android:name="com.google.android.gms.common.api.GoogleApiActivity"

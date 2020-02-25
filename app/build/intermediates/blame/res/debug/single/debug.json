@@ -2381,7 +2381,7 @@
     },
     {
         "merged": "D:\\MyProjects\\Demo\\android-vision-master\\android-vision-master\\visionSamples\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\menu_scanner_menu.xml.flat",
-        "source": "D:\\MyProjects\\Demo\\android-vision-master\\android-vision-master\\visionSamples\\barcode-reader\\app\\src\\main\\res\\menu\\scanner_menu.xml"
+        "source": "D:\\MyProjects\\Demo\\android-vision-master\\android-vision-master\\visionSamples\\barcode-reader\\codescanner\\build\\intermediates\\packaged_res\\debug\\menu\\scanner_menu.xml"
     },
     {
         "merged": "D:\\MyProjects\\Demo\\android-vision-master\\android-vision-master\\visionSamples\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_filled_stroke_color.xml.flat",
