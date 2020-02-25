@@ -69,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codescanner/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-677">
-              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state relative-caret-position="357">
+              <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -252,11 +252,11 @@
           <expand>
             <path>
               <item name="barcode-reader" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="e9137016:NonAndroidModuleNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
               <item name="barcode-reader" type="1abcf292:AndroidViewProjectNode" />
-              <item name="codescanner" type="e9137016:NonAndroidModuleNode" />
+              <item name="codescanner" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
               <item name="barcode-reader" type="1abcf292:AndroidViewProjectNode" />
@@ -535,11 +535,19 @@
       <option name="project" value="LOCAL" />
       <updated>1582615291612</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update Commit">
+      <created>1582616029553</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582616029553</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" />
       <window_info id="Image Layers" order="1" />
@@ -557,7 +565,7 @@
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32993197" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50075644" side_tool="true" weight="0.32993197" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32993197" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49924356" weight="0.22278911" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49924356" visible="true" weight="0.22278911" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.32993197" />
       <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49924356" weight="0.32993197" />
       <window_info anchor="right" id="Gradle" order="0" weight="0.19969743" />
@@ -876,8 +884,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/codescanner/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-677">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="357">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
         </state>
       </provider>
     </entry>
