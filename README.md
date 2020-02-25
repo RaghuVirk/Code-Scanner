@@ -1,7 +1,7 @@
 # Code-Scanner
 QR/BAR Code Scanner Library to scan QR/BAR codes by Raghubeer Singh Virk
 
-Classes for detecting and parsing bar codes are available in the com.google.android.gms.vision.barcode namespace. The BarcodeDetector class is the main workhorse -- processing Frame objects to return a SparseArray types.
+Classes for detecting and parsing bar codes are available in the com.virk.codescanner namespace. The BarcodeDetector class is the main workhorse -- processing Frame objects to return a SparseArray types.
 
 The Barcode type represents a single recognized barcode and its value. In the case of 1D barcode such as UPC codes, this will simply be the number that is encoded in the bar code. This is available in the rawValue property, with the detected encoding type set in the format field.
 
@@ -23,6 +23,7 @@ allprojects {
 ```java
 dependencies {
 	        implementation 'com.github.RaghuVirk:Code-Scanner:0.1.1'
+		implementation 'com.google.android.gms:play-services-vision:19.0.0'
 	}
 ```
 *Step 3.* Call BarcodeCaptureActivity for result.
@@ -76,7 +77,7 @@ BarcodeCaptureActivity.startScanner(Activity.this);
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
-    ```    
+```   
 # Note
 You may face manifest merge error while compilation due to same string name use below code in your manifest to solve the error:-
 ```java     
