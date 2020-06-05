@@ -15,4 +15,7 @@
     <string name="st_action_done">Done</string>
     <string name="st_scanned_code">Scanned Code</string>
     <string name="st_code_helper_text">Scan the QR/BAR code by placing it in front of camera.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
