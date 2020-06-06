@@ -1,14 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CodeScannerFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/topLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:keepScreenOn="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbarlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorPrimary"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                    app:titleTextColor="@color/white" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Scanner"
+                        android:layout_gravity="center"
+                        android:id="@+id/toolbar_title"
+                        android:textSize="@dimen/_14sdp"
+                        />
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.virk.codescanner.cameraUI.CameraSourcePreview
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appbarlayout">
+
+                <com.virk.codescanner.cameraUI.GraphicOverlay
+                    android:id="@+id/graphicOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.virk.codescanner.cameraUI.CameraSourcePreview>
+
+            <Switch
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/flash_switch"
+                android:checked="false"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/flash_toggle_bg"
+                android:focusable="false"
+                android:thumb="@null"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:track="@null"
+                android:focusableInTouchMode="false"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/il_from_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_marginBottom="?attr/actionBarSize"
+            app:hintEnabled="true">
+
+            <TextView
+                android:id="@+id/barcode_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:layout_margin="@dimen/_10sdp"
+                android:focusable="false"
+                android:text="@string/st_code_helper_text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
 
 </FrameLayout>

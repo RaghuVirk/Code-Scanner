@@ -22,7 +22,11 @@
         android:icon="@drawable/icon"
         android:label="MultiTrackerApp"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
+
+        <!-- <activity android:name=".MainActivity"></activity> -->
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -31,7 +35,7 @@
             android:value="barcode" />
 
         <activity
-            android:name="com.google.android.gms.samples.vision.barcodereader.MainActivity"
+            android:name="com.google.android.gms.samples.vision.barcodereader.Main2Activity"
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,11 +43,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!--
-            <activity android:name=".BarcodeCaptureActivit"
-            android:label="Read Barcode"/>
-        -->
         <activity
             android:name="com.virk.codescanner.BarcodeCaptureActivity"
             android:label="Read Barcode"

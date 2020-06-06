@@ -2076,6 +2076,9 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dr_circle_flash_off
+drawable dr_circle_flash_on
+drawable flash_toggle_bg
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_calendar_black_24dp
@@ -2250,6 +2253,8 @@ id filled
 id filter_chip
 id fitToContents
 id fixed
+id flash_switch
+id fm
 id forever
 id ghost_view
 id ghost_view_holder
@@ -2418,6 +2423,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toolbar
+id toolbar_title
 id top
 id topLayout
 id topPanel
@@ -2501,6 +2507,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_main2
 layout barcode_capture
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2519,6 +2526,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dp_example
+layout fragment_code_scanner
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2579,6 +2587,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu frag_scanner_menu
 menu scanner_menu
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
@@ -2640,8 +2649,11 @@ string common_signin_button_text
 string common_signin_button_text_long
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
+string fab_content_auto_focus
+string fab_content_flash
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string low_storage_error

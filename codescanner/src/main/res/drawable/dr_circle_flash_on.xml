@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="oval">
+            <solid
+                android:color="#60666666"/>
+            <size
+                android:width="120dp"
+                android:height="120dp"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_flash_on" android:top="@dimen/_8sdp" android:bottom="@dimen/_8sdp"
+        android:end="@dimen/_8sdp" android:start="@dimen/_8sdp"/>
+</layer-list>

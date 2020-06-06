@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\MyProjects\\Demo\\android-vision-master\\android-vision-master\\visionSamples\\barcode-reader\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
+            "outputFile": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\5d52d9573d8a8f70a8462cc8f8a42ce9\\material-1.1.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\5d52d9573d8a8f70a8462cc8f8a42ce9\\material-1.1.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

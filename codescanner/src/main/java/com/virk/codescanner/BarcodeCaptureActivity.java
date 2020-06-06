@@ -29,6 +29,7 @@ import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.Menu;
@@ -37,7 +38,6 @@ import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.DrawableRes;
@@ -54,6 +54,7 @@ import com.google.android.gms.vision.MultiProcessor;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
 import com.virk.codescanner.cameraUI.CameraSource;
 import com.virk.codescanner.cameraUI.CameraSourcePreview;
 import com.virk.codescanner.cameraUI.GraphicOverlay;
@@ -66,20 +67,23 @@ import java.io.IOException;
  * size, and ID of each barcode.
  */
 public final class BarcodeCaptureActivity extends AppCompatActivity implements BarcodeGraphicTracker.BarcodeUpdateListener {
-    private static final String TAG = "Barcode-reader";
+    public static final String TAG = "Barcode-reader";
 
     // intent request code to handle updating play services if needed.
-    private static final int RC_HANDLE_GMS = 9001;
+    public static final int RC_HANDLE_GMS = 9001;
 
     // permission request codes need to be < 256
-    private static final int RC_HANDLE_CAMERA_PERM = 2;
+    public static final int RC_HANDLE_CAMERA_PERM = 2;
     public static final int RC_BARCODE_CAPTURE = 9002;
 
     // constants used to pass extra data in the intent
     public static final String AutoFocus = "AutoFocus";
     public static final String PreviewCode = "PreviewCode";
+    public static final String title = "title";
     public static final String UseFlash = "UseFlash";
     public static final String BarcodeObject = "Barcode";
+    public static String shouldTitleVisible = "toolBarVisibility";
+    public static String shouldShowBack= "showHomBack";
 
     private CameraSource mCameraSource;
     private CameraSourcePreview mPreview;
@@ -92,6 +96,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
     private boolean autoFocus = true;
     private boolean useFlash = false;
     private boolean previewCode = false;
+    private String toolbarTitle = "";
     private Toolbar toolBar;
 //    private EditText scannedCode;
     private Barcode capturedBarCode;
@@ -115,6 +120,16 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
 
         context.startActivityForResult(intent, RC_BARCODE_CAPTURE);
     }
+
+    public static void startScanner(Activity context,boolean shouldUseFlash,boolean shouldPreviewCode,String title) {
+        Intent intent = new Intent(context, BarcodeCaptureActivity.class);
+        intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
+        intent.putExtra(BarcodeCaptureActivity.UseFlash, shouldUseFlash);
+        intent.putExtra(BarcodeCaptureActivity.PreviewCode, shouldPreviewCode);
+        intent.putExtra(BarcodeCaptureActivity.title, title);
+
+        context.startActivityForResult(intent, RC_BARCODE_CAPTURE);
+    }
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -128,12 +143,16 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
         toolBar = findViewById(R.id.toolbar);
 //        scannedCode = findViewById(R.id.barcode_value);
 
-        setupToolBar("QR/Bar Code Scanner");
 
         // read parameters from the intent used to launch the activity.
         autoFocus = getIntent().getBooleanExtra(AutoFocus, true);
         useFlash = getIntent().getBooleanExtra(UseFlash, false);
         previewCode = getIntent().getBooleanExtra(PreviewCode, false);
+        toolbarTitle = getIntent().getStringExtra(title);
+        if(TextUtils.isEmpty(toolbarTitle)){
+            toolbarTitle = "Scanner";
+        }
+        setupToolBar(toolbarTitle);
 
         initializeScanner(autoFocus, useFlash, previewCode);
         Snackbar.make(mGraphicOverlay, "Tap to capture. Pinch/Stretch to zoom",

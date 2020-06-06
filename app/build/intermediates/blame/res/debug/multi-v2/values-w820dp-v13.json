@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\MyProjects\\Demo\\android-vision-master\\android-vision-master\\visionSamples\\barcode-reader\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+            "outputFile": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "D:\\MyProjects\\Demo\\android-vision-master\\android-vision-master\\visionSamples\\barcode-reader\\codescanner\\build\\intermediates\\packaged_res\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
+                    "source": "R:\\Android_Projects\\Demos\\barcode-reader\\codescanner\\build\\intermediates\\packaged_res\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
