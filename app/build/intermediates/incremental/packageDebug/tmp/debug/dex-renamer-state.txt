@@ -1,4 +1,4 @@
-#Sat Jun 06 18:15:48 EAT 2020
+#Sun Jun 07 00:00:27 EAT 2020
 base.0=R\:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

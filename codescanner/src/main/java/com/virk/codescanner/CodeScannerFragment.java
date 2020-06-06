@@ -62,7 +62,7 @@ import static com.virk.codescanner.BarcodeCaptureActivity.RC_HANDLE_GMS;
  * Use the {@link CodeScannerFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CodeScannerFragment extends Fragment implements BarcodeGraphicTracker.BarcodeUpdateListener {
+public class CodeScannerFragment extends Fragment {
     private static final String TAG = "Barcode-reader";
 
     private CameraSource mCameraSource;
@@ -85,15 +85,24 @@ public class CodeScannerFragment extends Fragment implements BarcodeGraphicTrack
     private Barcode capturedBarCode;
     View rootView;
     private TextView tvToolbarTitle;
-
-    public void setListener(BarcodeCapturedListener listener) {
-        this.listener = listener;
-    }
-
-    private BarcodeCapturedListener listener;
+    private BarcodeGraphicTracker.BarcodeUpdateListener listener;
 
     public CodeScannerFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            listener = (BarcodeGraphicTracker.BarcodeUpdateListener) context;
+        } catch (ClassCastException castException) {
+            Log.i(TAG, "onAttach:  BarcodeGraphicTracker.BarcodeUpdateListener Is not implemented in Parent activity");
+            /** The activity does not implement the listener. */
+            castException.printStackTrace();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -175,24 +184,24 @@ public class CodeScannerFragment extends Fragment implements BarcodeGraphicTrack
                 Snackbar.LENGTH_SHORT)/*.setBackgroundTint(getResources().getColor(R.color.white))
                 .setTextColor(getResources().getColor(R.color.black))*/
                 .show();
-                rootView.setOnTouchListener(new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View v, MotionEvent e) {
-                        boolean b = scaleGestureDetector.onTouchEvent(e);
+        rootView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent e) {
+                boolean b = scaleGestureDetector.onTouchEvent(e);
 
-                        boolean c = gestureDetector.onTouchEvent(e);
+                boolean c = gestureDetector.onTouchEvent(e);
 
-                        return b || c || onTouch(rootView,e);
-                    }
-                });
-                fSwitch.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        useFlash = !useFlash;
-                        initializeScanner(autoFocus, useFlash, previewCode);
-                        onResume();
-                    }
-                });
+                return b || c || onTouch(rootView, e);
+            }
+        });
+        fSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                useFlash = !useFlash;
+                initializeScanner(autoFocus, useFlash, previewCode);
+                onResume();
+            }
+        });
                /* fSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -365,19 +374,19 @@ public class CodeScannerFragment extends Fragment implements BarcodeGraphicTrack
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        if (listener != null) {
+                            listener.onBarcodeDetected(barcode);
+                        }
+                        enableMenu();
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 if (mPreview != null) {
                                     mPreview.stop();
                                 }
-                                if(listener!=null){
-                                    listener.onBarcodeScanned(barcode);
-                                }
-                                enableMenu();
 //                                scannedCode.setText(barcode.rawValue);
                             }
-                        }, 500);
+                        }, 400);
 
                     }
                 });
@@ -573,7 +582,7 @@ public class CodeScannerFragment extends Fragment implements BarcodeGraphicTrack
 
         if (best != null) {
             if (listener != null)
-                listener.onBarcodeScanned(best);
+                listener.onBarcodeDetected(best);
             return true;
         }
         return false;
@@ -640,14 +649,4 @@ public class CodeScannerFragment extends Fragment implements BarcodeGraphicTrack
         }
     }
 
-    @Override
-    public void onBarcodeDetected(Barcode barcode) {
-        //do something with barcode data returned
-        /*if (listener != null)
-            listener.onBarcodeScanned(barcode);*/
-    }
-
-    public interface BarcodeCapturedListener {
-        void onBarcodeScanned(Barcode barcode);
-    }
 }

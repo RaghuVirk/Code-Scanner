@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -20,12 +22,7 @@ public class Main2Activity extends AppCompatActivity implements BarcodeGraphicTr
         setContentView(R.layout.activity_main2);
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.fm,CodeScannerFragment.newInstance(Main2Activity.this, false, true, false, true, "Scanner Text", new CodeScannerFragment.BarcodeCapturedListener() {
-            @Override
-            public void onBarcodeScanned(Barcode barcode) {
-                Toast.makeText(Main2Activity.this, "Scanned Code : "+barcode.displayValue, Toast.LENGTH_SHORT).show();
-            }
-        })).commit();
+        ft.add(R.id.fm,CodeScannerFragment.newInstance(Main2Activity.this, false, true, false, true, "Scanner Text")).commit();
     }
 
     public void onClick(View view) {
@@ -33,7 +30,13 @@ public class Main2Activity extends AppCompatActivity implements BarcodeGraphicTr
     }
 
     @Override
-    public void onBarcodeDetected(Barcode barcode) {
-
+    public void onBarcodeDetected(final Barcode barcode) {
+        Log.i("TAG", "onBarcodeDetected: "+barcode.displayValue);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(Main2Activity.this, barcode.displayValue+"", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
