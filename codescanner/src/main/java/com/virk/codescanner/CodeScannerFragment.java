@@ -85,7 +85,12 @@ public class CodeScannerFragment extends Fragment implements BarcodeGraphicTrack
     private Barcode capturedBarCode;
     View rootView;
     private TextView tvToolbarTitle;
-    private static BarcodeCapturedListener listener;
+
+    public void setListener(BarcodeCapturedListener listener) {
+        this.listener = listener;
+    }
+
+    private BarcodeCapturedListener listener;
 
     public CodeScannerFragment() {
         // Required empty public constructor
@@ -97,7 +102,7 @@ public class CodeScannerFragment extends Fragment implements BarcodeGraphicTrack
      *
      * @return A new instance of fragment CodeScannerFragment.
      */
-    public static CodeScannerFragment newInstance(BarcodeCapturedListener mListener) {
+    public static CodeScannerFragment newInstance() {
         CodeScannerFragment fragment = new CodeScannerFragment();
         Bundle args = new Bundle();
         args.putBoolean(BarcodeCaptureActivity.AutoFocus, true);
@@ -105,7 +110,6 @@ public class CodeScannerFragment extends Fragment implements BarcodeGraphicTrack
         args.putBoolean(BarcodeCaptureActivity.PreviewCode, false);
         args.putBoolean(BarcodeCaptureActivity.PreviewCode, false);
         fragment.setArguments(args);
-        listener = mListener;
         return fragment;
     }
 
@@ -113,7 +117,7 @@ public class CodeScannerFragment extends Fragment implements BarcodeGraphicTrack
                                                   boolean shouldPreviewCode,
                                                   boolean shouldHaveToolbar,
                                                   boolean shouldHaveBack,
-                                                  String toolTitle, BarcodeCapturedListener mListener) {
+                                                  String toolTitle) {
         CodeScannerFragment fragment = new CodeScannerFragment();
         Bundle args = new Bundle();
         args.putBoolean(BarcodeCaptureActivity.AutoFocus, true);
@@ -123,7 +127,6 @@ public class CodeScannerFragment extends Fragment implements BarcodeGraphicTrack
         args.putBoolean(BarcodeCaptureActivity.shouldTitleVisible, shouldHaveToolbar);
         args.putBoolean(BarcodeCaptureActivity.shouldShowBack, shouldHaveBack);
         fragment.setArguments(args);
-        listener = mListener;
         return fragment;
     }
 
