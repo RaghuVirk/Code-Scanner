@@ -10,7 +10,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b06919-fe97-48c0-b550-cc17a4cd4ba2" name="Default Changelist" comment="Code Scanner Fragment">
+    <list default="true" id="c5b06919-fe97-48c0-b550-cc17a4cd4ba2" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/barcodereader/Main2Activity.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/codescanner/src/main/res/drawable-xxxhdpi/ic_flash_off.png" afterDir="false" />
@@ -1536,7 +1536,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="4a626ab0" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="192.168.10.158:5555" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -1915,7 +1915,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591381080691</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Code Scanner Fragment">
+      <created>1591454953296</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1591454953296</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
