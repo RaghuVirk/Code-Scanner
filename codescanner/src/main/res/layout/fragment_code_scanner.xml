@@ -89,7 +89,6 @@
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="@dimen/_8sdp"
             android:layout_marginRight="@dimen/_8sdp"
-            android:layout_marginBottom="?attr/actionBarSize"
             app:hintEnabled="true">
 
             <TextView
