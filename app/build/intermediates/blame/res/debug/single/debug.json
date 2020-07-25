@@ -16,12 +16,12 @@
         "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\5d52d9573d8a8f70a8462cc8f8a42ce9\\material-1.1.0\\res\\animator\\design_fab_show_motion_spec.xml"
     },
     {
-        "merged": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
-    },
-    {
         "merged": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_expanded_menu_layout.xml.flat",
         "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\layout_test_action_chip.xml.flat",
@@ -68,12 +68,12 @@
         "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
     {
-        "merged": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\77c2fc448e2bd0738fd67dce062b1efd\\play-services-base-17.0.0\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
-    },
-    {
         "merged": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_snackbar_include.xml.flat",
         "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\5d52d9573d8a8f70a8462cc8f8a42ce9\\material-1.1.0\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
+        "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\77c2fc448e2bd0738fd67dce062b1efd\\play-services-base-17.0.0\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_text_input_end_icon.xml.flat",
@@ -124,12 +124,12 @@
         "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\layout_test_reflow_chipgroup.xml.flat",
-        "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\5d52d9573d8a8f70a8462cc8f8a42ce9\\material-1.1.0\\res\\layout\\test_reflow_chipgroup.xml"
-    },
-    {
         "merged": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_out.xml.flat",
         "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\5d52d9573d8a8f70a8462cc8f8a42ce9\\material-1.1.0\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\layout_test_reflow_chipgroup.xml.flat",
+        "source": "C:\\Users\\Raghubeer Singh\\.gradle\\caches\\transforms-2\\files-2.1\\5d52d9573d8a8f70a8462cc8f8a42ce9\\material-1.1.0\\res\\layout\\test_reflow_chipgroup.xml"
     },
     {
         "merged": "R:\\Android_Projects\\Demos\\barcode-reader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_flash_on.png.flat",

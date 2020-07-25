@@ -11,6 +11,6 @@
                 android:height="120dp"/>
         </shape>
     </item>
-    <item android:drawable="@drawable/ic_flash_on" android:top="@dimen/_15sdp" android:bottom="@dimen/_15sdp"
-        android:end="@dimen/_15sdp" android:start="@dimen/_15sdp"/>
+    <item android:drawable="@drawable/ic_flash_on" android:top="@dimen/_12sdp" android:bottom="@dimen/_12sdp"
+        android:end="@dimen/_12sdp" android:start="@dimen/_12sdp"/>
 </layer-list>
