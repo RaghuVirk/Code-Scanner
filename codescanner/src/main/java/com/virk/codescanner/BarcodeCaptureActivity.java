@@ -30,7 +30,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -50,7 +52,10 @@ import androidx.core.app.ActivityCompat;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.CommonStatusCodes;
+import com.google.android.gms.vision.Detector;
+import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.MultiProcessor;
+import com.google.android.gms.vision.Tracker;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 import com.google.android.material.snackbar.Snackbar;
@@ -79,11 +84,12 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
     // constants used to pass extra data in the intent
     public static final String AutoFocus = "AutoFocus";
     public static final String PreviewCode = "PreviewCode";
+    public static final String BarcodeFormats = "BarcodeFormats";
     public static final String title = "title";
     public static final String UseFlash = "UseFlash";
     public static final String BarcodeObject = "Barcode";
     public static String shouldTitleVisible = "toolBarVisibility";
-    public static String shouldShowBack= "showHomBack";
+    public static String shouldShowBack = "showHomBack";
 
     private CameraSource mCameraSource;
     private CameraSourcePreview mPreview;
@@ -96,11 +102,11 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
     private boolean autoFocus = true;
     private boolean useFlash = false;
     private boolean previewCode = false;
+    private int barcodeFormats = Barcode.ALL_FORMATS;
     private String toolbarTitle = "";
     private Toolbar toolBar;
-//    private EditText scannedCode;
+    //    private EditText scannedCode;
     private Barcode capturedBarCode;
-
 
 
     public static void startScanner(Activity context) {
@@ -108,28 +114,33 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
         intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
         intent.putExtra(BarcodeCaptureActivity.UseFlash, false);
         intent.putExtra(BarcodeCaptureActivity.PreviewCode, false);
+        intent.putExtra(BarcodeCaptureActivity.BarcodeFormats, Barcode.ALL_FORMATS);
 
         context.startActivityForResult(intent, RC_BARCODE_CAPTURE);
     }
 
-    public static void startScanner(Activity context,boolean shouldUseFlash,boolean shouldPreviewCode) {
+    public static void startScanner(Activity context, boolean shouldUseFlash, boolean shouldPreviewCode, @NonNull int BarcodeFormats) {
         Intent intent = new Intent(context, BarcodeCaptureActivity.class);
         intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
         intent.putExtra(BarcodeCaptureActivity.UseFlash, shouldUseFlash);
         intent.putExtra(BarcodeCaptureActivity.PreviewCode, shouldPreviewCode);
+        intent.putExtra(BarcodeCaptureActivity.BarcodeFormats, BarcodeFormats);
 
         context.startActivityForResult(intent, RC_BARCODE_CAPTURE);
     }
 
-    public static void startScanner(Activity context,boolean shouldUseFlash,boolean shouldPreviewCode,String title) {
+    public static void startScanner(Activity context, boolean shouldUseFlash, boolean shouldPreviewCode, @NonNull int BarcodeFormats, String title) {
         Intent intent = new Intent(context, BarcodeCaptureActivity.class);
         intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
         intent.putExtra(BarcodeCaptureActivity.UseFlash, shouldUseFlash);
         intent.putExtra(BarcodeCaptureActivity.PreviewCode, shouldPreviewCode);
         intent.putExtra(BarcodeCaptureActivity.title, title);
+        intent.putExtra(BarcodeCaptureActivity.BarcodeFormats, BarcodeFormats);
+
 
         context.startActivityForResult(intent, RC_BARCODE_CAPTURE);
     }
+
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -138,8 +149,8 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
         super.onCreate(icicle);
         setContentView(R.layout.barcode_capture);
 
-        mPreview =  findViewById(R.id.preview);
-        mGraphicOverlay =  findViewById(R.id.graphicOverlay);
+        mPreview = findViewById(R.id.preview);
+        mGraphicOverlay = findViewById(R.id.graphicOverlay);
         toolBar = findViewById(R.id.toolbar);
 //        scannedCode = findViewById(R.id.barcode_value);
 
@@ -148,8 +159,10 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
         autoFocus = getIntent().getBooleanExtra(AutoFocus, true);
         useFlash = getIntent().getBooleanExtra(UseFlash, false);
         previewCode = getIntent().getBooleanExtra(PreviewCode, false);
+        barcodeFormats = getIntent().getIntExtra(BarcodeFormats, Barcode.ALL_FORMATS);
+
         toolbarTitle = getIntent().getStringExtra(title);
-        if(TextUtils.isEmpty(toolbarTitle)){
+        if (TextUtils.isEmpty(toolbarTitle)) {
             toolbarTitle = "Scanner";
         }
         setupToolBar(toolbarTitle);
@@ -301,12 +314,12 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
     @SuppressLint("InlinedApi")
     private void createCameraSource(boolean autoFocus, boolean useFlash, boolean previewCode) {
         Context context = getApplicationContext();
-
         // A barcode detector is created to track barcodes.  An associated multi-processor instance
         // is set to receive the barcode detection results, track the barcodes, and maintain
         // graphics for each barcode on screen.  The factory is used by the multi-processor to
         // create a separate tracker instance for each barcode.
-        BarcodeDetector barcodeDetector = new BarcodeDetector.Builder(context).build();
+        final BarcodeDetector barcodeDetector = new BarcodeDetector.Builder(context).setBarcodeFormats(barcodeFormats).build();
+
         BarcodeTrackerFactory barcodeFactory = new BarcodeTrackerFactory(mGraphicOverlay, this, previewCode, new BarcodeTrackerFactory.CodeDetectionListener() {
             @Override
             public void onCodeDetected(final Barcode barcode) {
@@ -332,8 +345,10 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
 
             }
         });
+
         barcodeDetector.setProcessor(
                 new MultiProcessor.Builder<>(barcodeFactory).build());
+
 
         if (!barcodeDetector.isOperational()) {
             // Note: The first time that an app using the barcode or face API is installed on a
@@ -363,7 +378,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
         // at long distances.
         CameraSource.Builder builder = new CameraSource.Builder(getApplicationContext(), barcodeDetector)
                 .setFacing(CameraSource.CAMERA_FACING_BACK)
-                .setRequestedPreviewSize(1600, 1024)
+                .setRequestedPreviewSize(320, 240)
                 .setRequestedFps(15.0f);
 
         // make sure that auto focus is an available option

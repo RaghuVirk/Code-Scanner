@@ -73,13 +73,13 @@
 44            </intent-filter>
 45        </activity>
 46        <activity
-46-->[:codescanner] R:\Android_Projects\Demos\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:9-31:35
+46-->[:codescanner] R:\Android_Projects\Demos\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:9-38:35
 47            android:name="com.virk.codescanner.BarcodeCaptureActivity"
-47-->[:codescanner] R:\Android_Projects\Demos\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-71
+47-->[:codescanner] R:\Android_Projects\Demos\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:13-71
 48            android:label="Read Barcode"
-48-->[:codescanner] R:\Android_Projects\Demos\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-41
+48-->[:codescanner] R:\Android_Projects\Demos\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-41
 49            android:screenOrientation="portrait" />
-49-->[:codescanner] R:\Android_Projects\Demos\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-49
+49-->[:codescanner] R:\Android_Projects\Demos\barcode-reader\codescanner\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:13-49
 50        <activity
 50-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Raghubeer Singh\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
 51            android:name="com.google.android.gms.common.api.GoogleApiActivity"

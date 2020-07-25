@@ -7,5 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".Main2Activity">
 
-
+<!--    <fragment
+        android:id="@+id/barcode"
+        android:name="com.virk.codescanner.latestScanner.BarcodeCapture"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:rsv_auto_focus="true"
+        app:rsv_code_format="all_format"
+        app:rsv_flash="false"
+        app:rsv_multiple="false"
+        app:rsv_rect_colors="@array/rect_color" />-->
 </FrameLayout>

@@ -6,10 +6,14 @@
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-
+<!--    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />-->
     <application
-        tools:node="merge"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        tools:node="merge">
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -20,8 +24,8 @@
         <activity
             android:name=".BarcodeCaptureActivity"
             android:label="Read Barcode"
-            tools:node="strict"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            tools:node="strict" />
     </application>
 
 </manifest>

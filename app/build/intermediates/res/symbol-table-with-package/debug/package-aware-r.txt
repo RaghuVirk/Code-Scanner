@@ -45,6 +45,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array rect_color
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -97,6 +98,7 @@ attr autoSizeMinTextSize
 attr autoSizePresetSizes
 attr autoSizeStepGranularity
 attr autoSizeTextType
+attr auto_focus
 attr background
 attr backgroundColor
 attr backgroundInsetBottom
@@ -476,6 +478,9 @@ attr liftOnScroll
 attr liftOnScrollTargetViewId
 attr lineHeight
 attr lineSpacing
+attr line_color
+attr line_speed
+attr line_width
 attr listChoiceBackgroundIndicator
 attr listChoiceIndicatorMultipleAnimated
 attr listChoiceIndicatorSingleAnimated
@@ -558,6 +563,15 @@ attr ratingBarStyleSmall
 attr recyclerViewStyle
 attr reverseLayout
 attr rippleColor
+attr rsv_auto_focus
+attr rsv_camera_facing
+attr rsv_code_format
+attr rsv_draw
+attr rsv_flash
+attr rsv_multiple
+attr rsv_rect_colors
+attr rsv_show_text
+attr rsv_touch
 attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
@@ -589,6 +603,8 @@ attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
 attr splitTrack
+attr square_height
+attr square_width
 attr srcCompat
 attr stackFromEnd
 attr startIconCheckable
@@ -707,6 +723,7 @@ attr trackTintMode
 attr ttcIndex
 attr useCompatPadding
 attr useMaterialThemeColors
+attr use_flash
 attr viewInflaterClass
 attr voiceIcon
 attr windowActionBar
@@ -793,7 +810,11 @@ color colorTextSecondary
 color colorThemePurple
 color colorThemePurpleDull
 color color_background_btn
+color color_blue
+color color_brown
+color color_green
 color color_light_gray
+color color_orange
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -847,6 +868,7 @@ color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
 color dim_foreground_material_light
+color divider_grey
 color edit_color
 color error_color_material_dark
 color error_color_material_light
@@ -2189,11 +2211,14 @@ id adjust_height
 id adjust_width
 id alertTitle
 id all
+id all_format
 id always
 id appbarlayout
 id async
 id auto
 id auto_focus
+id aztec
+id back
 id barcode_value
 id barrier
 id beginning
@@ -2214,6 +2239,10 @@ id chronometer
 id clear_text
 id clip_horizontal
 id clip_vertical
+id code_128
+id code_39
+id code_93
+id code_bar
 id collapseActionView
 id confirm_button
 id container
@@ -2224,6 +2253,7 @@ id custom
 id customPanel
 id cut
 id dark
+id data_matrix
 id date_picker_actions
 id decor_content_parent
 id default_activity_button
@@ -2237,6 +2267,8 @@ id dimensions
 id direct
 id disableHome
 id dropdown_menu
+id ean_13
+id ean_8
 id edit_query
 id end
 id end_padder
@@ -2256,6 +2288,7 @@ id fixed
 id flash_switch
 id fm
 id forever
+id front
 id ghost_view
 id ghost_view_holder
 id give_us_a_review_landmine_button
@@ -2279,6 +2312,7 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id itf
 id labeled
 id largeLabel
 id left
@@ -2338,12 +2372,14 @@ id parent
 id parentPanel
 id parent_matrix
 id password_toggle
+id pdf417
 id peekHeight
 id percent
 id pin
 id preview
 id progress_circular
 id progress_horizontal
+id qr_code
 id radio
 id read_barcode
 id right
@@ -2353,6 +2389,7 @@ id rounded
 id save_non_transition_alpha
 id save_overlay_view
 id scale
+id scan_overlay
 id screen
 id scroll
 id scrollIndicatorDown
@@ -2437,6 +2474,8 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id upc_a
+id upc_e
 id useLogo
 id use_flash
 id view_offset_helper
@@ -2455,6 +2494,8 @@ integer design_snackbar_text_max_lines
 integer design_tab_indicator_anim_duration_ms
 integer google_play_services_version
 integer hide_password_duration
+integer line_speed
+integer line_width
 integer mtrl_badge_max_character_count
 integer mtrl_btn_anim_delay_ms
 integer mtrl_btn_anim_duration_ms
@@ -2465,6 +2506,8 @@ integer mtrl_card_anim_delay_ms
 integer mtrl_card_anim_duration_ms
 integer mtrl_chip_anim_duration
 integer mtrl_tab_indicator_anim_duration_ms
+integer scanner_rect_height
+integer scanner_rect_width
 integer show_password_duration
 integer status_bar_notification_info_maxnum
 interpolator btn_checkbox_checked_mtrl_animation_interpolator_0
@@ -2509,6 +2552,7 @@ layout abc_tooltip
 layout activity_main
 layout activity_main2
 layout barcode_capture
+layout barcode_capture_latest
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3411,6 +3455,7 @@ styleable AppCompatTextHelper android_textAppearance android_drawableTop android
 styleable AppCompatTextView android_textAppearance autoSizeMaxTextSize autoSizeMinTextSize autoSizePresetSizes autoSizeStepGranularity autoSizeTextType drawableBottomCompat drawableEndCompat drawableLeftCompat drawableRightCompat drawableStartCompat drawableTint drawableTintMode drawableTopCompat firstBaselineToTopHeight fontFamily fontVariationSettings lastBaselineToBottomHeight lineHeight textAllCaps textLocale
 styleable AppCompatTheme android_windowIsFloating android_windowAnimationStyle actionBarDivider actionBarItemBackground actionBarPopupTheme actionBarSize actionBarSplitStyle actionBarStyle actionBarTabBarStyle actionBarTabStyle actionBarTabTextStyle actionBarTheme actionBarWidgetTheme actionButtonStyle actionDropDownStyle actionMenuTextAppearance actionMenuTextColor actionModeBackground actionModeCloseButtonStyle actionModeCloseDrawable actionModeCopyDrawable actionModeCutDrawable actionModeFindDrawable actionModePasteDrawable actionModePopupWindowStyle actionModeSelectAllDrawable actionModeShareDrawable actionModeSplitBackground actionModeStyle actionModeWebSearchDrawable actionOverflowButtonStyle actionOverflowMenuStyle activityChooserViewStyle alertDialogButtonGroupStyle alertDialogCenterButtons alertDialogStyle alertDialogTheme autoCompleteTextViewStyle borderlessButtonStyle buttonBarButtonStyle buttonBarNegativeButtonStyle buttonBarNeutralButtonStyle buttonBarPositiveButtonStyle buttonBarStyle buttonStyle buttonStyleSmall checkboxStyle checkedTextViewStyle colorAccent colorBackgroundFloating colorButtonNormal colorControlActivated colorControlHighlight colorControlNormal colorError colorPrimary colorPrimaryDark colorSwitchThumbNormal controlBackground dialogCornerRadius dialogPreferredPadding dialogTheme dividerHorizontal dividerVertical dropDownListViewStyle dropdownListPreferredItemHeight editTextBackground editTextColor editTextStyle homeAsUpIndicator imageButtonStyle listChoiceBackgroundIndicator listChoiceIndicatorMultipleAnimated listChoiceIndicatorSingleAnimated listDividerAlertDialog listMenuViewStyle listPopupWindowStyle listPreferredItemHeight listPreferredItemHeightLarge listPreferredItemHeightSmall listPreferredItemPaddingEnd listPreferredItemPaddingLeft listPreferredItemPaddingRight listPreferredItemPaddingStart panelBackground panelMenuListTheme panelMenuListWidth popupMenuStyle popupWindowStyle radioButtonStyle ratingBarStyle ratingBarStyleIndicator ratingBarStyleSmall searchViewStyle seekBarStyle selectableItemBackground selectableItemBackgroundBorderless spinnerDropDownItemStyle spinnerStyle switchStyle textAppearanceLargePopupMenu textAppearanceListItem textAppearanceListItemSecondary textAppearanceListItemSmall textAppearancePopupMenuHeader textAppearanceSearchResultSubtitle textAppearanceSearchResultTitle textAppearanceSmallPopupMenu textColorAlertDialogListItem textColorSearchUrl toolbarNavigationButtonStyle toolbarStyle tooltipForegroundColor tooltipFrameBackground viewInflaterClass windowActionBar windowActionBarOverlay windowActionModeOverlay windowFixedHeightMajor windowFixedHeightMinor windowFixedWidthMajor windowFixedWidthMinor windowMinWidthMajor windowMinWidthMinor windowNoTitle
 styleable Badge backgroundColor badgeGravity badgeTextColor maxCharacterCount number
+styleable BarcodeReaderFragment auto_focus use_flash
 styleable BottomAppBar backgroundTint elevation fabAlignmentMode fabAnimationMode fabCradleMargin fabCradleRoundedCornerRadius fabCradleVerticalOffset hideOnScroll
 styleable BottomNavigationView backgroundTint elevation itemBackground itemHorizontalTranslationEnabled itemIconSize itemIconTint itemRippleColor itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable BottomSheetBehavior_Layout android_elevation backgroundTint behavior_expandedOffset behavior_fitToContents behavior_halfExpandedRatio behavior_hideable behavior_peekHeight behavior_saveFlags behavior_skipCollapsed shapeAppearance shapeAppearanceOverlay
@@ -3463,6 +3508,7 @@ styleable PopupWindow android_popupBackground android_popupAnimationStyle overla
 styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
+styleable ScannerOverlay line_color line_speed line_width square_height square_width
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
@@ -3485,6 +3531,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+styleable rsv rsv_auto_focus rsv_camera_facing rsv_code_format rsv_draw rsv_flash rsv_multiple rsv_rect_colors rsv_show_text rsv_touch
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

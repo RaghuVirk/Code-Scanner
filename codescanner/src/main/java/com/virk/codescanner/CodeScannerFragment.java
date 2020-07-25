@@ -24,6 +24,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
@@ -53,6 +54,7 @@ import com.virk.codescanner.cameraUI.GraphicOverlay;
 
 import java.io.IOException;
 
+import static com.virk.codescanner.BarcodeCaptureActivity.BarcodeFormats;
 import static com.virk.codescanner.BarcodeCaptureActivity.RC_HANDLE_CAMERA_PERM;
 import static com.virk.codescanner.BarcodeCaptureActivity.RC_HANDLE_GMS;
 
@@ -78,6 +80,8 @@ public class CodeScannerFragment extends Fragment {
     private boolean previewCode = false;
     private boolean toolbarVisible = true;
     private boolean shouldHaveBack = true;
+    private int barcodeFormats = Barcode.ALL_FORMATS;
+
     private Toolbar toolBar;
     private Switch fSwitch;
     private String toolBarTitle = "";
@@ -100,7 +104,7 @@ public class CodeScannerFragment extends Fragment {
             Log.i(TAG, "onAttach:  BarcodeGraphicTracker.BarcodeUpdateListener Is not implemented in Parent activity");
             /** The activity does not implement the listener. */
             castException.printStackTrace();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -118,6 +122,7 @@ public class CodeScannerFragment extends Fragment {
         args.putBoolean(BarcodeCaptureActivity.UseFlash, false);
         args.putBoolean(BarcodeCaptureActivity.PreviewCode, false);
         args.putBoolean(BarcodeCaptureActivity.PreviewCode, false);
+        args.putInt(BarcodeFormats, Barcode.ALL_FORMATS);
         fragment.setArguments(args);
         return fragment;
     }
@@ -126,6 +131,7 @@ public class CodeScannerFragment extends Fragment {
                                                   boolean shouldPreviewCode,
                                                   boolean shouldHaveToolbar,
                                                   boolean shouldHaveBack,
+                                                  @NonNull int barcodeFormats,
                                                   String toolTitle) {
         CodeScannerFragment fragment = new CodeScannerFragment();
         Bundle args = new Bundle();
@@ -135,6 +141,8 @@ public class CodeScannerFragment extends Fragment {
         args.putString(BarcodeCaptureActivity.title, toolTitle);
         args.putBoolean(BarcodeCaptureActivity.shouldTitleVisible, shouldHaveToolbar);
         args.putBoolean(BarcodeCaptureActivity.shouldShowBack, shouldHaveBack);
+        args.putInt(BarcodeFormats, barcodeFormats);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -149,6 +157,8 @@ public class CodeScannerFragment extends Fragment {
             toolbarVisible = getArguments().getBoolean(BarcodeCaptureActivity.shouldTitleVisible);
             shouldHaveBack = getArguments().getBoolean(BarcodeCaptureActivity.shouldShowBack);
             toolBarTitle = getArguments().getString(BarcodeCaptureActivity.title);
+            barcodeFormats = getArguments().getInt(BarcodeFormats, Barcode.ALL_FORMATS);
+
         }
     }
 
@@ -365,7 +375,9 @@ public class CodeScannerFragment extends Fragment {
         // is set to receive the barcode detection results, track the barcodes, and maintain
         // graphics for each barcode on screen.  The factory is used by the multi-processor to
         // create a separate tracker instance for each barcode.
-        BarcodeDetector barcodeDetector = new BarcodeDetector.Builder(context).build();
+//        BarcodeDetector bx = new BarcodeDetector(barcodeDetector,pxFromDp(280), height, wight);
+
+        BarcodeDetector barcodeDetector = new BarcodeDetector.Builder(context).setBarcodeFormats(barcodeFormats).build();
         BarcodeTrackerFactory barcodeFactory = new BarcodeTrackerFactory(mGraphicOverlay, getActivity(), previewCode, new BarcodeTrackerFactory.CodeDetectionListener() {
             @Override
             public void onCodeDetected(final Barcode barcode) {
@@ -374,20 +386,13 @@ public class CodeScannerFragment extends Fragment {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        if (listener != null) {
+                        /*if (listener != null) {
                             listener.onBarcodeDetected(barcode);
-                        }
+                        }*/
                         enableMenu();
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                if (mPreview != null) {
-                                    mPreview.stop();
-                                }
-//                                scannedCode.setText(barcode.rawValue);
-                            }
-                        }, 400);
-
+                        if (mPreview != null) {
+                            mPreview.stop();
+                        }
                     }
                 });
 
@@ -424,7 +429,7 @@ public class CodeScannerFragment extends Fragment {
         // at long distances.
         CameraSource.Builder builder = new CameraSource.Builder(getActivity(), barcodeDetector)
                 .setFacing(CameraSource.CAMERA_FACING_BACK)
-                .setRequestedPreviewSize(1600, 1024)
+                .setRequestedPreviewSize(1024, 1024)
                 .setRequestedFps(15.0f);
 
         // make sure that auto focus is an available option

@@ -29,21 +29,33 @@
                 app:titleTextColor="@color/white" />
 
         </com.google.android.material.appbar.AppBarLayout>
+         <com.virk.codescanner.cameraUI.CameraSourcePreview
+           android:id="@+id/preview"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/appbarlayout">
 
-        <com.virk.codescanner.cameraUI.CameraSourcePreview
+           <com.virk.codescanner.cameraUI.GraphicOverlay
+               android:id="@+id/graphicOverlay"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent" />
+
+       </com.virk.codescanner.cameraUI.CameraSourcePreview>
+    <!--    <com.virk.codescanner.cameraUI.CameraSourcePreview
             android:id="@+id/preview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/appbarlayout">
 
-            <com.virk.codescanner.cameraUI.GraphicOverlay
+            <com.virk.codescanner.latestScanner.ui.camera.GraphicOverlay
                 android:id="@+id/graphicOverlay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-        </com.virk.codescanner.cameraUI.CameraSourcePreview>
-
+        </com.virk.codescanner.latestScanner.ui.camera.CameraSourcePreview>
+-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.textfield.TextInputLayout

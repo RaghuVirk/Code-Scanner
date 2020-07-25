@@ -32,54 +32,70 @@
                     android:layout_height="?attr/actionBarSize"
                     android:background="@color/colorPrimary"
                     android:theme="@style/ThemeOverlay.AppCompat.Dark"
-                    app:titleTextColor="@color/white" >
+                    app:titleTextColor="@color/white">
+
                     <TextView
+                        android:id="@+id/toolbar_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="Scanner"
                         android:layout_gravity="center"
-                        android:id="@+id/toolbar_title"
-                        android:textSize="@dimen/_14sdp"
-                        />
+                        android:text="Scanner"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp" />
                 </androidx.appcompat.widget.Toolbar>
 
             </com.google.android.material.appbar.AppBarLayout>
+
 
             <com.virk.codescanner.cameraUI.CameraSourcePreview
                 android:id="@+id/preview"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/appbarlayout">
+
+              <!--  <com.virk.codescanner.ScannerOverlay
+                    android:id="@+id/scan_overlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#6D000000"
+                    app:line_color="@color/colorPrimary"
+                    app:line_speed="6"
+                    app:line_width="5"
+                    app:square_height="250"
+                    app:square_width="250" />-->
 
                 <com.virk.codescanner.cameraUI.GraphicOverlay
                     android:id="@+id/graphicOverlay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
+
             </com.virk.codescanner.cameraUI.CameraSourcePreview>
+            <!--            </com.virk.codescanner.cameraUI.CameraSourcePreview>-->
+
 
             <Switch
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:id="@+id/flash_switch"
-                android:checked="false"
                 android:layout_width="@dimen/_45sdp"
                 android:layout_height="@dimen/_45sdp"
-                android:layout_marginTop="@dimen/_25sdp"
                 android:layout_centerVertical="true"
                 android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_25sdp"
                 android:background="@drawable/flash_toggle_bg"
+                android:checked="false"
                 android:focusable="false"
-                android:thumb="@null"
-                android:visibility="gone"
-                tools:visibility="visible"
-                android:track="@null"
                 android:focusableInTouchMode="false"
-                />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:thumb="@null"
+                android:track="@null"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -95,12 +111,13 @@
                 android:id="@+id/barcode_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:editable="false"
                 android:layout_margin="@dimen/_10sdp"
+                android:editable="false"
                 android:focusable="false"
                 android:text="@string/st_code_helper_text"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textStyle="normal" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </RelativeLayout>
