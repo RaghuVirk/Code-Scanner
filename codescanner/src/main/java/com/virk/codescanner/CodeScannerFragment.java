@@ -390,9 +390,9 @@ public class CodeScannerFragment extends Fragment {
                             listener.onBarcodeDetected(barcode);
                         }*/
                         enableMenu();
-                        if (mPreview != null) {
+                      /*  if (mPreview != null) {
                             mPreview.stop();
-                        }
+                        }*/
                     }
                 });
 
@@ -588,6 +588,9 @@ public class CodeScannerFragment extends Fragment {
         if (best != null) {
             if (listener != null)
                 listener.onBarcodeDetected(best);
+            if (mPreview != null) {
+                mPreview.stop();
+            }
             return true;
         }
         return false;
