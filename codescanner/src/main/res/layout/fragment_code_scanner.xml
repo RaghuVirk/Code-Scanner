@@ -103,8 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="@dimen/_8sdp"
-            android:layout_marginRight="@dimen/_8sdp"
+           android:background="@color/design_default_color_background"
             app:hintEnabled="true">
 
             <TextView

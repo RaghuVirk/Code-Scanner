@@ -429,7 +429,7 @@ public class CodeScannerFragment extends Fragment {
         // at long distances.
         CameraSource.Builder builder = new CameraSource.Builder(getActivity(), barcodeDetector)
                 .setFacing(CameraSource.CAMERA_FACING_BACK)
-                .setRequestedPreviewSize(1024, 720)
+                .setRequestedPreviewSize(1024, 1024)
                 .setRequestedFps(15.0f);
 
         // make sure that auto focus is an available option
